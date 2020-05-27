@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Weather</title>
+       <link rel="icon" href="/img/icon.png">
+        <link rel="stylesheet" href="/css/stylesheet.css">
+    </head>
+        <body>
+          <div class="main-content">
+               {{>header}}
+               <form>
+                 <input>
+                  <button>Search</button>
+               </form>
+               <p id="message-1"></p>
+               <p id="message-2"></p>
+               <p id="message-3"></p>
+               <p id="message-4"></p>
+           </div>
+          {{>footer}}
+          <script>
+            function activatePlacesseatch(){
+              var input=document.querySelector('input');
+              var autocomplete=new google.maps.places.Autocomplete(input);
+            }
+            </script>
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7548xJH9bK_V7c7Z2VDeA69BsLrZutk4&libraries=places&callback=activatePlacesseatch"></script>
+          <script src="/js/client.js"></script>
+        </body>
+   
+</html>
