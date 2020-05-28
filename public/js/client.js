@@ -34,7 +34,7 @@ const search=document.querySelector('input');
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
     const location=search.value;
-    fetch('http://localhost:3000/weather?find='+location+'').then(response=>{
+    fetch('/weather?find='+location+'').then(response=>{
         response.json().then(data=>{
             if(data.error){
                 messageOne.textContent=data.error;
